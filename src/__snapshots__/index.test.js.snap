@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ignores line breaks in \`devider\` option 1`] = `
+"# Title
+
+Content...
+
+> Quote text 1
+>
+> ---
+>
+> Quote text 2
+
+Some paragraph...
+
+> Quote text 3
+
+Another paragraph...
+
+> Quote text 4
+>
+> ---
+>
+> Quote text 5
+>
+> ---
+>
+> Quote text 6
+
+More paragraphs...
+
+\`\`\`
+const param1 = true
+
+---
+
+const param2 = true
+
+---
+
+const param3 = true
+\`\`\`
+
+Another paragraph
+
+\`\`\`
+const param4 = true
+
+---
+
+const param5 = true
+\`\`\`
+
+Anoter paragraph
+
+\`\`\`
+const end = true
+\`\`\`
+
+Last paragraph
+"
+`;
+
+exports[`ignores types that not in whitelist 1`] = `
+"# Title
+
+Content...
+
+> Quote text 1
+
+> Quote text 2
+
+Some paragraph...
+
+> Quote text 3
+
+Another paragraph...
+
+> Quote text 4
+
+> Quote text 5
+
+> Quote text 6
+
+More paragraphs...
+
+\`\`\`
+const param1 = true
+\`\`\`
+
+\`\`\`
+const param2 = true
+\`\`\`
+
+\`\`\`
+const param3 = true
+\`\`\`
+
+Another paragraph
+
+\`\`\`
+const param4 = true
+\`\`\`
+
+\`\`\`
+const param5 = true
+\`\`\`
+
+Anoter paragraph
+
+\`\`\`
+const end = true
+\`\`\`
+
+Last paragraph
+"
+`;
+
+exports[`merges default types 1`] = `
+"# Title
+
+Content...
+
+> Quote text 1
+>
+> Quote text 2
+
+Some paragraph...
+
+> Quote text 3
+
+Another paragraph...
+
+> Quote text 4
+>
+> Quote text 5
+>
+> Quote text 6
+
+More paragraphs...
+
+\`\`\`
+const param1 = true
+
+const param2 = true
+
+const param3 = true
+\`\`\`
+
+Another paragraph
+
+\`\`\`
+const param4 = true
+
+const param5 = true
+\`\`\`
+
+Anoter paragraph
+
+\`\`\`
+const end = true
+\`\`\`
+
+Last paragraph
+"
+`;
+
+exports[`merges only \`code\` blocks 1`] = `
+"# Title
+
+Content...
+
+> Quote text 1
+
+> Quote text 2
+
+Some paragraph...
+
+> Quote text 3
+
+Another paragraph...
+
+> Quote text 4
+
+> Quote text 5
+
+> Quote text 6
+
+More paragraphs...
+
+\`\`\`
+const param1 = true
+
+const param2 = true
+
+const param3 = true
+\`\`\`
+
+Another paragraph
+
+\`\`\`
+const param4 = true
+
+const param5 = true
+\`\`\`
+
+Anoter paragraph
+
+\`\`\`
+const end = true
+\`\`\`
+
+Last paragraph
+"
+`;

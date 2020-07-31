@@ -1,0 +1,40 @@
+{
+  "name": "remark-merge",
+  "version": "0.0.0",
+  "description": "Remark plugin to get all images from `markdown` as an `array` and optionally update/replace them",
+  "main": "dist/index.js",
+  "scripts": {
+    "release": "np",
+    "build": "npm run prettier && ./node_modules/.bin/babel src -d dist --ignore 'src/*.test.js'",
+    "test": "./node_modules/.bin/jest",
+    "test:watch": "npm run test -- --watch",
+    "prepublish": "npm run build",
+    "prettier": "./node_modules/.bin/prettier --config ./.prettierrc --write src"
+  },
+  "author": "Andrey Stepanov <code@andrey.co> (https://andrey.co/)",
+  "bugs": {
+    "url": "https://github.com/andreystepanov/remark-merge/issues"
+  },
+  "homepage": "https://github.com/andreystepanov/remark-merge",
+  "keywords": [
+    "remark",
+    "images",
+    "plugin",
+    "markdown"
+  ],
+  "dependencies": {
+    "unist-util-remove": "^2.0.0",
+    "unist-util-visit": "^2.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-export-default-from": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "jest": "^26.1.0",
+    "np": "^6.3.2",
+    "prettier": "^2.0.5",
+    "remark": "^12.0.1"
+  }
+}
