@@ -1,6 +1,6 @@
 {
   "name": "remark-merge",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Remark plugin to get all images from `markdown` as an `array` and optionally update/replace them",
   "main": "dist/index.js",
   "scripts": {
