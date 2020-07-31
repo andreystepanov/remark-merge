@@ -23,6 +23,7 @@
     "markdown"
   ],
   "dependencies": {
+    "group-consecutive-numbers": "0.0.1",
     "unist-util-remove": "^2.0.0",
     "unist-util-visit": "^2.0.3"
   },

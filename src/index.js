@@ -1,5 +1,6 @@
 import visit from 'unist-util-visit'
 import remove from 'unist-util-remove'
+import group from 'group-consecutive-numbers'
 
 const whitelist = ['blockquote', 'code']
 
@@ -42,9 +43,7 @@ function join(tree, type, devider) {
     }
   })
 
-  indexes = [...new Set(indexes)].sort((a, b) => a - b)
-
-  const groups = groupConsecutive(indexes)
+  const groups = group(indexes)
   const toRemove = []
 
   groups.map(([first, ...rest]) => {
@@ -73,20 +72,4 @@ function join(tree, type, devider) {
 
     return toRemove.includes(index)
   })
-}
-
-function groupConsecutive(numbers = [], minLength = 2) {
-  const groups = {}
-
-  numbers.map(index => {
-    const prev = index - 1
-    if (groups[prev]) {
-      groups[index] = [...groups[prev], index]
-      delete groups[prev]
-    } else {
-      groups[index] = [index]
-    }
-  })
-
-  return Object.values(groups).filter(a => a.length >= minLength)
 }
