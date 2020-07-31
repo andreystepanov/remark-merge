@@ -138,7 +138,7 @@ Last paragraph
 
 If `devider` option is provided, then merged blocks will be devided with provided string (in our example it's `---`):
 
-````
+````markdown
 ...
 
 > Quote text 4
@@ -164,11 +164,11 @@ const param2 = true
 
 const param3 = true
 ```
-...
 
+...
 ````
 
 ## Options
 
-`types` - `array` - One of the defaults, or both. Default is `[ 'blockquote', 'code' ]`
-`devider` - `string` - Sting that will devide blocks. Line break will be ignored. Default is empty string.
+- `types` - `array` - One of the defaults, or both. Default is `[ 'blockquote', 'code' ]`
+- `devider` - `string` - Sting that will devide blocks. Line break will be ignored. Default is empty string.
